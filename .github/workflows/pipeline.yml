@@ -1,14 +1,14 @@
 name: Tesis Auto CI
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'data/raw/**'
-      - 'src/**'
-      - 'informe/**'
-      - 'requirements.txt'
-      - '.github/workflows/**'
+# on:
+#   push:
+#     branches: [ main ]
+#     paths:
+#       - 'data/raw/**'
+#       - 'src/**'
+#       - 'informe/**'
+#       - 'requirements.txt'
+#       - '.github/workflows/**'
 
 jobs:
   build:
