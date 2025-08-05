@@ -6,6 +6,8 @@ on:
     paths:
       - 'data/raw/**'
       - 'src/**'
+      - 'informe/**'
+      - 'requirements.txt'
       - '.github/workflows/**'
 
 jobs:
@@ -32,8 +34,26 @@ jobs:
     - name: Generar gráficas
       run: python src/graficas.py
 
-    - name: Cargar artefactos
+    - name: Instalar pandoc
+      run: sudo apt-get install -y pandoc
+
+    - name: Generar informe PDF
+      run: python src/generar_pdf.py
+
+    - name: Subir gráficas como artefacto
       uses: actions/upload-artifact@v4
       with:
         name: graficas-tesis
         path: informe/graficas/
+
+    - name: Subir informe PDF como artefacto
+      uses: actions/upload-artifact@v4
+      with:
+        name: informe-tesis
+        path: informe/informe.pdf
+
+    - name: Subir resultados a S3
+      run: bash src/subir_a_s3.sh
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
