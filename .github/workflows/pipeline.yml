@@ -1,0 +1,39 @@
+name: Tesis Auto CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/raw/**'
+      - 'src/**'
+      - '.github/workflows/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Ejecutar limpieza de datos
+      run: python src/limpiar_datos.py
+
+    - name: Generar gráficas
+      run: python src/graficas.py
+
+    - name: Cargar artefactos
+      uses: actions/upload-artifact@v3
+      with:
+        name: graficas-tesis
+        path: informe/graficas/
