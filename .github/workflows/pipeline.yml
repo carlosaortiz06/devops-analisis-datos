@@ -64,7 +64,9 @@ jobs:
         AWS_DEFAULT_REGION: us-east-1
         RUN_ID: ${{ github.run_number }}
       run: |
-        pwd 
+        pwd
+        echo "Hay estos archivos"
+        ls -la
         aws s3 cp informe/informe.pdf s3://mi-bucket-tesis/resultados/run-${RUN_ID}/informe.pdf
         aws s3 cp informe/graficas/ s3://mi-bucket-tesis/resultados/run-${RUN_ID}/graficas/ --recursive
         aws s3 cp data/processed/datos_limpios.csv s3://mi-bucket-tesis/resultados/run-${RUN_ID}/datos_limpios.csv --recursive
