@@ -66,5 +66,5 @@ jobs:
       run: |
         aws s3 cp informe/informe.pdf s3://mi-bucket-tesis/resultados/run-${RUN_ID}/informe.pdf
         aws s3 cp informe/graficas/ s3://mi-bucket-tesis/resultados/run-${RUN_ID}/graficas/ --recursive
-        aws s3 cp processed/datos_limpios.csv/ s3://mi-bucket-tesis/resultados/run-${RUN_ID}/data/ --recursive
+        aws s3 cp processed/datos_limpios.csv s3://mi-bucket-tesis/resultados/run-${RUN_ID}/datos_limpios.csv --recursive
 
