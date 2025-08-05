@@ -5,13 +5,13 @@
 Este informe presenta los resultados obtenidos a partir de los datos recolectados. A continuación se muestran las gráficas generadas a partir del análisis:
 
 ## Distribución de Edad
-![Distribución de Edad](graficas/edad.png)
+![Distribución de Edad](informe/graficas/edad.png)
 
 ## Opiniones por Región
-![Opiniones por Región](graficas/opiniones_region.png)
+![Opiniones por Región](informe/graficas/opiniones_region.png)
 
 ## Distribución de Opiniones
-![Opiniones](graficas/opiniones_pie.png)
+![Opiniones](informe/graficas/opiniones_pie.png)
 
 **Conclusión**
 
