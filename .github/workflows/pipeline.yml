@@ -33,7 +33,7 @@ jobs:
       run: python src/graficas.py
 
     - name: Cargar artefactos
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: graficas-tesis
         path: informe/graficas/
