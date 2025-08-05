@@ -1,18 +1,18 @@
 # Informe de Resultados
 
-**Resumen**
+**Resumen generado automáticamente:**
 
-Este informe presenta los resultados obtenidos a partir de los datos recolectados. A continuación se muestran las gráficas generadas a partir del análisis:
+Se analizaron **10 registros**. La edad promedio fue de **27.10 años**.
 
 ## Distribución de Edad
-![Distribución de Edad](informe/graficas/edad.png)
+![Edad](informe/graficas/edad.png)
 
 ## Opiniones por Región
-![Opiniones por Región](informe/graficas/opiniones_region.png)
+![Región](informe/graficas/opiniones_region.png)
 
 ## Distribución de Opiniones
 ![Opiniones](informe/graficas/opiniones_pie.png)
 
-**Conclusión**
+**Conclusión generada automáticamente:**
 
-La mayoría de los encuestados tiene una opinión positiva y se concentra en ciertas regiones. Estos datos pueden servir para futuras investigaciones.
+Los datos procesados muestran tendencias claras en la distribución de edades y opiniones según la región. Se recomienda un análisis más profundo en futuras ejecuciones.
