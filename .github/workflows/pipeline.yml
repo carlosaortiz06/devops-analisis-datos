@@ -39,6 +39,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y pandoc texlive texlive-latex-extra
 
+    - name: Generar informe Markdown automático
+      run: python src/generar_md.py
+
     - name: Generar informe PDF
       run: python src/generar_pdf.py
 
