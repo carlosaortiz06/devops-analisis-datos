@@ -34,8 +34,10 @@ jobs:
     - name: Generar gráficas
       run: python src/graficas.py
 
-    - name: Instalar pandoc
-      run: sudo apt-get install -y pandoc
+    - name: Instalar herramientas necesarias
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive texlive-latex-extra
 
     - name: Generar informe PDF
       run: python src/generar_pdf.py
